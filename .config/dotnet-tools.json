@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "lyainbot.pluginpacker": {
+      "version": "0.0.2",
+      "commands": [
+        "lypacker"
+      ],
+      "rollForward": false
+    }
+  }
+}
