@@ -10,6 +10,11 @@
       <PackageReference Include="LyainBot" Version="0.0.3" />
       <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     </ItemGroup>
+    
+    <Target Name="CleanDir" BeforeTargets="Publish">
+        <Delete Files="$(OutputPath)/LyainBot.ExamplePlugin.zip" />
+        <Delete Files="$(OutputPath)/LyainBot.ExamplePlugin.lyplugin" />
+    </Target>
 
     <Target Name="PackPlugin" AfterTargets="Publish">
         <Exec Command="dotnet lypacker $(OutputPath)" />
